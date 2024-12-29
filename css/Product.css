@@ -9,6 +9,7 @@
   grid-gap: 25px;
   grid-template-columns: repeat(3, 1fr);
   max-height: 110vh;
+
   margin: auto;
   max-width: 900px;
 }
