@@ -16,6 +16,9 @@
   max-width: 600px;
   position: relative;
   overflow: hidden;
+  animation: fadeInUp 1s ease forwards;
+  animation-duration: 2000ms;
+  opacity: 0;
 }
 .contact-container:hover {
   box-shadow: 0px 0px 15px #ff7f50;
@@ -150,5 +153,16 @@
   100% {
     opacity: 0;
     transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
