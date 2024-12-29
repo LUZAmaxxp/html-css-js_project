@@ -13,11 +13,17 @@
   color: #f4f4f4;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+  animation-duration: 2000ms;
+  opacity: 0;
 }
 
 .hero p {
   font-size: 1.5rem;
   color: #e0e0e0;
+  animation: fadeInUp 1s ease forwards;
+  animation-duration: 2000ms;
+  opacity: 0;
 }
 
 .hero .btn {
@@ -32,6 +38,9 @@
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  animation-duration: 2000ms;
+  opacity: 0;
 }
 
 .hero .btn:hover {
@@ -46,6 +55,19 @@
 }
 .button {
   display: flex;
+}
+.hero.loaded {
+  opacity: 1; /* Fade in effect */
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 /* section */
