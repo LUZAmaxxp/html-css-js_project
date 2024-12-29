@@ -11,15 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function handleScroll() {
-    const contentElements = document.querySelectorAll(".scroll-fade-out");
+    const contentElements = document.getElementById("About");
 
-    contentElements.forEach((element) => {
-      if (!isElementInViewport(element)) {
-        element.classList.add("loaded");
-      } else {
-        element.classList.remove("loaded");
-      }
-    });
+    if (!isElementInViewport(contentElements)) {
+      element.classList.add("loaded");
+    }
   }
 
   document.addEventListener("scroll", handleScroll);

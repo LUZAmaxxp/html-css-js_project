@@ -16,7 +16,11 @@ body {
 }
 
 header {
-  background-color: rgba(51, 51, 51, 0.8);
+  background: linear-gradient(
+    135deg,
+    rgba(51, 51, 51, 0.9),
+    rgba(0, 0, 0, 0.8)
+  );
   padding: 20px;
   text-align: center;
   width: 100%;
@@ -29,18 +33,18 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 20px;
 }
 
 nav li {
-  display: inline;
-  margin-right: 20px;
+  display: inline-block;
+  margin-right: 30px;
 }
+
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: #f4f4f4;
   font-weight: bold;
-  transition: color 0.3s;
+  padding: 30px;
 }
 
 nav a:hover {
@@ -48,19 +52,15 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* Hero Section */
-
-/* Footer */
 footer {
-  background: rgba(0, 0, 0, 0.9);
-  padding: 20px 0;
   text-align: center;
-  color: white;
-  position: fixed;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  position: relative;
   bottom: 0;
-  width: 100%;
-  z-index: 10;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
 }
 .hd2 {
   color: #ff9900;
@@ -94,29 +94,24 @@ h2 img {
   background: #ff5733;
 }
 
-.menu-button {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto; /* Align to the right */
-}
-
-.menu-button .bar {
-  height: 4px;
-  width: 30px;
-  background-color: #fff;
-  margin: 4px;
-  border-radius: 5px; /* Rounded edges for bars */
-  transition: all 0.3s ease;
-}
-
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .menu-button {
     display: flex; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
-    margin-left: auto; /* Align to the right */
+    position: absolute; /* Positioning it absolutely */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Align to the right */
+  }
+  .menu-button .bar {
+    height: 4px;
+    width: 30px;
+    background-color: #fff;
+    margin: 4px;
+    border-radius: 5px; /* Rounded edges for bars */
+    transition: all 0.3s ease;
   }
   nav ul {
     display: none; /* Hide menu by default on mobile */
@@ -183,8 +178,4 @@ nav a {
   transition: color 0.3s ease;
   padding: 10px;
   border-radius: 5px; /* Rounded corners for links */
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect for links */
 }

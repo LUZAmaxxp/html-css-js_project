@@ -7,6 +7,7 @@
   height: 100vh;
   background: url("/assets/gamin2.jpg") no-repeat center center/cover;
   text-align: center;
+  animation: fadeInUp 2s ease forwards;
 }
 
 .hero h1 {
@@ -29,7 +30,6 @@
   font-size: 1.2rem;
   background: linear-gradient(45deg, #ff7f50, #ff4500);
   border: none;
-  text-decoration: none;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
   color: white;
@@ -50,6 +50,10 @@
 }
 .button {
   display: flex;
+}
+.hero a {
+  text-decoration: none;
+  color: #f4f4f4;
 }
 
 @keyframes fadeInUp {
@@ -86,6 +90,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  animation: backgroundAnimation 2s infinite alternate;
 }
 
 .outer-container {
@@ -206,30 +211,59 @@
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-@keyframes fadeInScroll {
+@keyframes fadeOut {
   0% {
     opacity: 1;
     transform: translateY(0);
   }
   100% {
-    opacity: 1;
-    transform: translateY(50px);
+    opacity: 0;
+    transform: translateY(150px);
   }
 }
 
-.scroll-fade-in {
+.scroll-fade-out {
   opacity: 1;
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.scroll-fade-in.loaded {
+.scroll-fade-out.loaded {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(150px);
+}
+@keyframes backgroundAnimation {
+  0% {
+    background-color: rgb(128, 133, 135);
+  }
+  50% {
+    background-color: rgb(111, 116, 120);
+  }
+  100% {
+    background-color: rgb(128, 133, 135);
+  }
+}
+
+@keyframes scaleImage {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.py-5 {
+  animation: backgroundAnimation 2s infinite alternate;
+}
+
+.img-fluid {
+  animation: scaleImage 5s infinite alternate;
 }
