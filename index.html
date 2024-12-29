@@ -5,38 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GamingHub - Home</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
-
   </head>
   <body>
     <header>
       <div>
+        <div class="menu-button" id="menuToggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
         <h2 class="hd2">
           DREAM_SETUP
-          <img src="./assets/cart-icon.png" alt="Shopping Cart" width="50" />
+          <img src="/assets/cart-icon.png" alt="Shopping Cart" width="50" />
         </h2>
+
         <nav>
-          <ul>
+          <ul id="menu" class="hidden">
             <li>
-              <a href="./index.html">
-                <i class="fas fa-home"></i> Home
-              </a>
+              <a href="./index.html"> <i class="fas fa-home"></i> Home </a>
             </li>
             <li>
-              <a href="./about.html">
-                <i class="fas fa-info-circle"></i> About Us
-              </a>
+              <a href="../about.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
             </li>
             <li>
-              <a href="./contact.html">
-                <i class="fas fa-envelope"></i> Contact
-              </a>
+              <a href="./contact.html"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
             </li>
             <li>
-              <a href="./services.html">
-                <i class="fas fa-box"></i> Products
-              </a>
+              <a href="./ProductPage.html"
+                ><i class="fas fa-box"></i> Products</a
+              >
             </li>
           </ul>
         </nav>
@@ -58,5 +64,6 @@
       <button id="scrollToTop">⬆️ Top</button>
     </footer>
     <script src="js/directScroll.js"></script>
+    <script src="js/togglemenu.js"></script>
   </body>
 </html>

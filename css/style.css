@@ -1,5 +1,6 @@
 /* General Reset */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +21,7 @@ header {
   text-align: center;
   width: 100%;
   position: fixed;
-
+  font-family: "Poppins", sans-serif;
 }
 
 nav ul {
@@ -71,6 +72,7 @@ nav a:hover {
 
 .hero .btn {
   padding: 15px 30px;
+  margin-top: 20px;
   font-size: 1.2rem;
   background: linear-gradient(45deg, #ff7f50, #ff4500);
   border: none;
@@ -164,6 +166,10 @@ h2 img {
   position: relative;
   overflow: hidden;
 }
+.contact-container:hover {
+  box-shadow: 0px 0px 15px #ff7f50;
+  transition: 1000ms;
+}
 
 .contact-heading {
   font-size: 2rem;
@@ -216,19 +222,18 @@ h2 img {
 .form-group input:focus,
 .form-group textarea:focus {
   background: #3a3a3a;
-  border: 1px solid #ff7f50;
 }
 
 .form-group input:focus + label,
 .form-group textarea:focus + label {
   top: 5px;
   font-size: 0.8rem;
-  color: #ff7f50;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:not(:placeholder-shown) + label {
-  top: 5px;
+  top: 1px;
   font-size: 0.8rem;
   color: #ff7f50;
 }
@@ -295,4 +300,99 @@ h2 img {
     opacity: 0;
     transform: translateY(-10px);
   }
+}
+
+.menu-button {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto; /* Align to the right */
+}
+
+.menu-button .bar {
+  height: 4px;
+  width: 30px;
+  background-color: #fff;
+  margin: 4px;
+  border-radius: 5px; /* Rounded edges for bars */
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .menu-button {
+    display: flex; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; /* Align to the right */
+  }
+  nav ul {
+    display: none; /* Hide menu by default on mobile */
+    flex-direction: row; /* Stack items vertically */
+    position: static;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(20, 20, 20, 0.95); /* Dark background for dropdown */
+    top: 60px; /* Position below the header */
+    right: 0; /* Align to the right */
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure it appears above other content */
+    padding: 50px; /* Add padding for aesthetics */
+    border-radius: 8px; /* Rounded corners for dropdown */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: max-height 0.3s ease-out; /* Smooth transition for opening */
+    max-height: 0; /* Start collapsed */
+    overflow: hidden; /* Hide overflow when collapsed */
+  }
+
+  nav ul.visible {
+    display: flex; /* Show menu when visible class is added */
+    max-height: 300px; /* Set a maximum height when open */
+  }
+
+  nav li {
+    margin-bottom: 15px; /* Space between menu items */
+    opacity: 0; /* Start with hidden items for animation effect */
+    transform: translateY(-10px); /* Slide up effect on appearance */
+    animation: fadeInUp 0.3s forwards; /* Animation on appearance */
+    animation-delay: calc(0.1s * var(--i)); /* Staggered animation delay */
+    --i: var(--index); /* Custom property to set index for delay */
+  }
+
+  nav li:nth-child(1) {
+    --index: 1;
+  }
+  nav li:nth-child(2) {
+    --index: 2;
+  }
+  nav li:nth-child(3) {
+    --index: 3;
+  }
+  nav li:nth-child(4) {
+    --index: 4;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners for links */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect for links */
 }
