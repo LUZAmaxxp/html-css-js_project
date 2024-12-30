@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    console.log("wah dkelyt");
     showPopup();
   });
 
   function showPopup() {
     popup.style.display = "block";
-    popup.style.accentColor = "white";
+    popup.style.accentColor = " red";
     setTimeout(() => {
       popup.style.display = "none";
     }, 3000);

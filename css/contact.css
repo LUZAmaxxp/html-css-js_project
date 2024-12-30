@@ -2,13 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 105vh;
-  padding: 40px;
+  min-height: 85vh;
 }
 body {
   background: url("/assets/NEUMORPHIC_CIRCLES_BACKGROUND.jpg") no-repeat center
     center/cover;
-  z-index: -50;
+  z-index: -1000;
 }
 
 .contact-container {
@@ -24,6 +23,7 @@ body {
   animation: fadeInUp 1s ease forwards;
   animation-duration: 1200ms;
   opacity: 0;
+  z-index: 100;
 }
 .contact-container:hover {
   box-shadow: 0px 0px 15px #ff7f50;

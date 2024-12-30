@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -11,6 +9,7 @@
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
+  margin: auto;
   background: linear-gradient(120deg, #141e30, #243b55);
   color: #f4f4f4;
 }
@@ -24,9 +23,9 @@ header {
   padding: 20px;
   text-align: center;
   width: 100%;
-  position: fixed;
+
   font-family: "Poppins", sans-serif;
-  z-index: 5;
+  z-index: 40;
 }
 
 nav ul {
