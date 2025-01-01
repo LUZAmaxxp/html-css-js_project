@@ -1,0 +1,95 @@
+/* General Styles */
+html,
+body {
+  height: 100%; /* Ensure the body takes the full height */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+body {
+  background-color: #f8f9fa; /* Light background for contrast */
+  font-family: "Arial", sans-serif; /* Clean font */
+}
+
+header {
+  background-color: #343a40; /* Dark header */
+  color: white;
+  padding: 10px 0;
+}
+
+.hd2 {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.2s; /* Smooth hover effect */
+  margin: 20px auto; /* Center the card */
+  max-width: 800px; /* Limit card width */
+  background-color: white; /* White background for the card */
+  display: flex; /* Flexbox for horizontal layout */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.card img {
+  border-top-left-radius: 10px; /* Rounded corners for the image */
+  border-bottom-left-radius: 10px; /* Rounded corners for the image */
+  width: 300px; /* Fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card-body {
+  padding: 20px; /* More padding for content */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+}
+
+.card-title {
+  font-size: 28px; /* Larger title */
+  font-weight: bold; /* Bold title */
+  color: #343a40; /* Dark text color */
+}
+
+.card-text {
+  font-size: 16px; /* Standard text size */
+  color: #6c757d; /* Muted text color */
+  margin-bottom: 15px; /* Space below text */
+}
+
+.text-danger {
+  font-size: 18px; /* Slightly larger for emphasis */
+}
+
+.btn {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border-radius: 5px; /* Rounded button */
+  padding: 10px 20px; /* Button padding */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Footer Styles */
