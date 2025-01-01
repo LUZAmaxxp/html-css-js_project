@@ -264,3 +264,9 @@
 .img-fluid {
   animation: scaleImage 5s infinite alternate;
 }
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
