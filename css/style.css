@@ -23,27 +23,19 @@ header {
   padding: 20px;
   text-align: center;
   width: 100%;
-
   font-family: "Poppins", sans-serif;
-  z-index: 40;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 nav li {
   display: inline-block;
   margin-right: 30px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #f4f4f4;
-  font-weight: bold;
-  padding: 30px;
 }
 
 nav a:hover {
@@ -176,5 +168,5 @@ nav a {
   font-weight: bold;
   transition: color 0.3s ease;
   padding: 10px;
-  border-radius: 5px; /* Rounded corners for links */
+  border-radius: 5px;
 }

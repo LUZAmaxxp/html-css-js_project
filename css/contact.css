@@ -133,8 +133,8 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: rgba(0, 128, 0, 0.9);
-  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
   padding: 15px 20px;
   border-radius: 8px;
   font-size: 1rem;
@@ -175,17 +175,6 @@ body {
   box-sizing: border-box;
 }
 
-body {
-  color: #acaabe;
-  text-rendering: optimizeLegibility;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #3b3d54;
-  font-size: 14px;
-  overflow: hidden;
-}
-
 .wrap {
   perspective-origin: 30% 30%;
   width: 100%;
@@ -195,7 +184,7 @@ body {
 .svg {
   stroke: #ff8400;
   position: absolute;
-  bottom: -100vh;
+  bottom: -11vh;
   transform-style: preserve-3d;
 }
 
