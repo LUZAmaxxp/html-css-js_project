@@ -5,7 +5,7 @@ function addToCart(item) {
     (cartItem) => cartItem.name === item.name
   );
 
-  if (existingItemIndex > -1) {
+  if (existingItemIndex >= 0) {
     cartItems[existingItemIndex].quantity++;
   } else {
     cartItems.push({ ...item, quantity: 1 });
