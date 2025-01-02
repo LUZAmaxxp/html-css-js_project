@@ -60,6 +60,8 @@ footer {
   font-family: "Press Start 2P", cursive;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin: 20px 0px 20px 0px;
+  font-size: 25px;
 }
 
 h2 img {
@@ -87,13 +89,19 @@ h2 img {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+  .hd2 {
+    border-bottom: none;
+  }
+  header {
+    height: 100px;
+  }
   .menu-button {
     display: flex; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
     position: absolute; /* Positioning it absolutely */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
+    top: 35px; /* Distance from the top */
+    left: 20px; /* Distance from the right */
     z-index: 1000; /* Align to the right */
   }
   .menu-button .bar {
@@ -121,6 +129,8 @@ h2 img {
     transition: max-height 0.3s ease-out; /* Smooth transition for opening */
     max-height: 0; /* Start collapsed */
     overflow: hidden; /* Hide overflow when collapsed */
+    margin-top: 0px;
+    margin-bottom: 0rem;
   }
 
   nav ul.visible {
