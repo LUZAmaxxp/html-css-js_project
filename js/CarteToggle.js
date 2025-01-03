@@ -29,12 +29,15 @@ function updateCart() {
       cartItem.className = "cart-item";
 
       cartItem.innerHTML = `
-                <img id="image" src="${item.image}" alt="${item.name}" />
+             
+                 <img id="image" src="${item.image}" alt="${item.name}" />
                 <span id="product-name">${item.name} (x${item.quantity})</span>
                 <span class="remove-button" onclick="removeFromCart(${index})">Remove</span>
+        
+                
             `;
 
-      cartItemsContainer.appendChild(cartItem);
+      cartItemsContainer.append(cartItem);
     });
     document.getElementById("checkoutButton").style.display = "block";
   }
