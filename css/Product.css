@@ -42,7 +42,7 @@ nav {
   top: 100px;
   right: 50px;
   z-index: 1000;
-  background-color: #ff9e5d;
+  background: -webkit-linear-gradient(rgb(218, 138, 68), #fe723f);
   width: 50px;
   height: 50px;
   border: 2px solid white;
@@ -54,9 +54,7 @@ nav {
   .cart-container {
     top: 25px;
     right: 30px;
-
   }
-
 }
 .cart-container :hover {
   cursor: pointer;
@@ -109,7 +107,6 @@ nav {
   animation-name: fadeInUp;
   animation-duration: 1000ms;
 }
-
 
 .cart-item {
   display: flex;

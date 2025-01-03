@@ -29,8 +29,8 @@ function updateCart() {
       cartItem.className = "cart-item";
 
       cartItem.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" />
-                <span>${item.name} (x${item.quantity})</span>
+                <img id="image" src="${item.image}" alt="${item.name}" />
+                <span id="product-name">${item.name} (x${item.quantity})</span>
                 <span class="remove-button" onclick="removeFromCart(${index})">Remove</span>
             `;
 
@@ -38,6 +38,7 @@ function updateCart() {
     });
     document.getElementById("checkoutButton").style.display = "block";
   }
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
 
 function removeFromCart(index) {

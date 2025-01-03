@@ -48,13 +48,15 @@ footer {
   padding: 20px;
   background: #333;
   color: #fff;
-  position: relative;
+  position: static;
   bottom: 0;
   left: 0;
   right: 0;
 }
 .hd2 {
-  color: #ff9900;
+  background: -webkit-linear-gradient(rgb(218, 138, 68), #fe723f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   border-bottom: 2px solid #ff9900;
   padding-bottom: 10px;
   font-family: "Press Start 2P", cursive;
@@ -84,23 +86,24 @@ h2 img {
 }
 
 #scrollToTop:hover {
-  background: #ff5733;
+  background: -webkit-linear-gradient(rgb(218, 138, 68), #fe723f);
+  animation: fadeInUp forwards;
+  animation-duration: 1000ms;
 }
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .hd2 {
     border-bottom: none;
+    padding-top: 20px;
   }
-  header {
-    height: 100px;
-  }
+
   .menu-button {
     display: flex; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
     position: absolute; /* Positioning it absolutely */
-    top: 35px; /* Distance from the top */
+    top: 55px; /* Distance from the top */
     left: 20px; /* Distance from the right */
     z-index: 1000; /* Align to the right */
   }

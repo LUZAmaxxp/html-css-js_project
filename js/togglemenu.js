@@ -3,4 +3,5 @@ const menu = document.getElementById("menu");
 
 menuToggle.addEventListener("click", () => {
   menu.classList.toggle("visible");
+  console.log("tclicka");
 });
