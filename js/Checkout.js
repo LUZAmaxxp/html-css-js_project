@@ -62,12 +62,17 @@ if (cartItems && cartItems.length > 0) {
 }
 
 function showOrderModal(item) {
+  const productKey = item.name.replace(/\s+/g, "");
+  const product = products[productKey];
+  console.log(product.price);
+
+  let price = item.quantity * product.price;
   const modal = document.getElementById("orderModal");
   const modalProductInfo = document.getElementById("modalProductInfo");
   modalProductInfo.innerHTML = `
         <img src="${item.image}" alt="${item.name}" style="max-width: 100%; border-radius: 8px;" />
         <h3>${item.name}</h3>
-        <p>Price: $${item.price}</p>
+        <p>Price: $${price}</p>
         <p>Quantity: ${item.quantity}</p>
         <p>Description: ${item.description}</p>
     `;
