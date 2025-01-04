@@ -1,11 +1,13 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f4f8;
+  color: #333;
 }
 
 h1 {
   text-align: center;
 }
+
 #footer {
   position: absolute;
 }
@@ -19,65 +21,111 @@ h1 {
 .cart-item {
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
   padding: 15px;
   margin: 10px;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 80%; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
 }
 
 .cart-item img {
-  max-width: 100px; /* Set a fixed width for images */
-  margin-right: 15px; /* Space between image and text */
-  border-radius: 5px; /* Rounded corners for images */
+  max-width: 100px;
+  margin-right: 15px;
+  border-radius: 8px;
 }
 
 .cart-item-details {
-  flex-grow: 1; /* Allow details to take up remaining space */
+  flex-grow: 1;
 }
 
+/* Modal Styling */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1000;
   left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  bottom: -100%; /* Start off-screen */
+  width: 100%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  transition: bottom 0.6s ease-out, opacity 0.6s ease;
+}
 
-  transition: opacity 0.5s ease; /* Fade effect */
+.modal.show {
+  bottom: 0;
+  opacity: 1;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  background: #fefefe;
+  margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 16px;
+  width: 60%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .close-button {
-  color: #aaa;
+  color: #888;
   float: right;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
-.close-button:hover,
-.close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.close-button:hover {
+  color: #444;
 }
 
 .modal-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#confirmOrderButton {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
+}
+
+#confirmOrderButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 128, 0, 0.3);
+}
+
+#cancelOrderButton {
+  background: linear-gradient(135deg, #f87171, #dc2626);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+}
+
+#cancelOrderButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 0, 0, 0.3);
 }

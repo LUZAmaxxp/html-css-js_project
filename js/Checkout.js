@@ -47,9 +47,14 @@ if (cartItems && cartItems.length > 0) {
       description.innerHTML += `<br>Description: ${product.description}`;
     }
 
-    // Add a button to confirm the order
     const confirmButton = document.createElement("button");
     confirmButton.textContent = "Confirm Order";
+    confirmButton.style.cssText = `  background: -webkit-linear-gradient(rgb(218, 138, 68), #fe723f);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid;
+  border-radius:5px;
+    font-family: "Poppins", sans-serif;`;
+
     confirmButton.onclick = () => showOrderModal(item);
 
     cartItemDiv.appendChild(img);
@@ -74,7 +79,7 @@ function showOrderModal(item) {
         <h3>${item.name}</h3>
         <p>Price: $${price}</p>
         <p>Quantity: ${item.quantity}</p>
-        <p>Description: ${item.description}</p>
+        <p>Description: ${product.description}</p>
     `;
   modal.style.display = "block";
 }

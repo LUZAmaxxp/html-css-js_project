@@ -58,8 +58,6 @@ nav {
 }
 .cart-container :hover {
   cursor: pointer;
-  animation-name: fadeInUp;
-  animation-duration: 1000ms;
 }
 
 .cart-icon {
@@ -95,8 +93,6 @@ nav {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   max-height: 400px;
   overflow-y: auto;
-  animation-name: fadeInUp;
-  animation-duration: 1000ms;
 }
 
 .cart-dropdown p {
