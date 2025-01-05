@@ -49,11 +49,22 @@ if (cartItems && cartItems.length > 0) {
 
     const confirmButton = document.createElement("button");
     confirmButton.textContent = "Confirm Order";
-    confirmButton.style.cssText = `  background: -webkit-linear-gradient(rgb(218, 138, 68), #fe723f);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  border: 1px solid;
-  border-radius:5px;
-    font-family: "Poppins", sans-serif;`;
+    confirmButton.style.cssText = `  
+      margin-left: auto;
+      margin-right: 20px;
+      background: linear-gradient(45deg, #fe723f, rgb(218, 138, 68));
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1);
+      
+      `;
 
     confirmButton.onclick = () => showOrderModal(item);
 
@@ -69,7 +80,6 @@ if (cartItems && cartItems.length > 0) {
 function showOrderModal(item) {
   const productKey = item.name.replace(/\s+/g, "");
   const product = products[productKey];
-  console.log(product.price);
 
   let price = item.quantity * product.price;
   const modal = document.getElementById("orderModal");
@@ -85,11 +95,29 @@ function showOrderModal(item) {
 }
 
 function closeOrderModal() {
-  document.getElementById("orderModal").style.display = "none"; // Hide the order modal
+  document.getElementById("orderModal").style.display = "none";
 }
 
-function confirmOrder() {
-  // Logic to finalize the order can be added here
-  alert("Order confirmed! Thank you for your purchase.");
-  closeOrderModal(); // Close the modal after confirming
+function cancelOrderByproduct() {
+  document.getElementById("cancelConfirmationModal").style.display = "block";
 }
+
+function confirmCancel() {
+  closeCancelModal();
+  closeOrderModal();
+}
+
+function closeCancelModal() {
+  document.getElementById("cancelConfirmationModal").style.display = "none";
+}
+
+function confirmOrderByproduct() {
+  document.getElementById("orderSuccessModal").style.display = "block";
+}
+
+function closeSuccessModal() {
+  document.getElementById("orderSuccessModal").style.display = "none";
+  closeOrderModal();
+}
+
+
