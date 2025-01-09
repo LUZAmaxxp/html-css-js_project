@@ -44,7 +44,6 @@ if (cartItems && cartItems.length > 0) {
     if (product) {
       let totalprice = product.price * price;
       description.innerHTML += `<br>Total Price: $${totalprice}`;
-      description.innerHTML += `<br>Description: ${product.description}`;
     }
 
     const confirmButton = document.createElement("button");
@@ -89,7 +88,7 @@ function showOrderModal(item) {
         <h3>${item.name}</h3>
         <p>Price: $${price}</p>
         <p>Quantity: ${item.quantity}</p>
-        <p>Description: ${product.description}</p>
+       
     `;
   modal.style.display = "block";
 }
@@ -119,5 +118,3 @@ function closeSuccessModal() {
   document.getElementById("orderSuccessModal").style.display = "none";
   closeOrderModal();
 }
-
-

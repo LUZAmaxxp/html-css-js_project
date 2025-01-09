@@ -16,6 +16,9 @@
     />
     <style>
       /* Modal styles */
+      #footer {
+        position: absolute;
+      }
       .modal {
         display: none;
         position: fixed;
@@ -27,7 +30,6 @@
         overflow: auto;
         background-color: rgba(0, 0, 0, 0.4);
         align-items: center;
-
       }
 
       .modal-content {
@@ -37,9 +39,6 @@
         border-radius: 8px;
         width: 50%;
       }
-
-
-      
 
       .modal-buttons button {
         padding: 10px 20px;
@@ -57,7 +56,6 @@
         display: flex;
         justify-content: left;
       }
-
     </style>
   </head>
   <body>
@@ -103,26 +101,32 @@
 
     <!-- Cancel Confirmation Modal -->
     <div id="cancelConfirmationModal" class="modal">
-      <div class="modal-content" style="align-items: center; text-align: center;">
+      <div
+        class="modal-content"
+        style="align-items: center; text-align: center"
+      >
         <h2>Are you sure you want to cancel?</h2>
         <div class="modal-buttons">
-          <button id="confirmCancelButton" onclick="confirmCancel()">Yes</button>
+          <button id="confirmCancelButton" onclick="confirmCancel()">
+            Yes
+          </button>
           <button id="denyCancelButton" onclick="closeCancelModal()">No</button>
         </div>
       </div>
     </div>
 
-    <!-- Order Success Modal -->
     <div id="orderSuccessModal" class="modal">
-      <div class="modal-content" style="text-align: center; ">
-        <h2 style="margin-top: 30px;">Order Purchased Successfully!</h2>
+      <div class="modal-content" style="text-align: center">
+        <h2 style="margin-top: 30px">Order Purchased Successfully!</h2>
         <p>
           <i
             class="fas fa-check-circle"
-            style="color: green; font-size: 2rem;"
+            style="color: green; font-size: 2rem"
           ></i>
         </p>
-        <button id="afterConfirmation-btn" onclick="closeSuccessModal()">OK</button>
+        <button id="afterConfirmation-btn" onclick="closeSuccessModal()">
+          OK
+        </button>
       </div>
     </div>
 
@@ -134,4 +138,3 @@
     <script src="js/togglemenu.js"></script>
   </body>
 </html>
-
