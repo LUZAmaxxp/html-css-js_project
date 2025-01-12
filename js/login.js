@@ -19,7 +19,7 @@ function addUser(event) {
         "User Added",
         "Your account has been successfully created.",
         "success",
-        "./index.html"
+        "./home.html"
       );
     }
   } else {
@@ -51,7 +51,7 @@ function checkin(email, password) {
       "Success!",
       "You are being redirected.",
       "success",
-      "./index.html"
+      "./home.html"
     );
     return true;
   } else {

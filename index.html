@@ -1,237 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GamingHub - Home</title>
+    <title></title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+      *:before,
+      *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #080710;
+      }
+
+      .background {
+        width: 430px;
+        height: 520px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        z-index: -3;
+      }
+
+      .background .shape {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .shape:first-child {
+        background: linear-gradient(#1845ad, #23a2f6);
+        left: -80px;
+        top: -80px;
+        z-index: -2;
+      }
+
+      .shape:last-child {
+        background: linear-gradient(to right, #ff512f, #f09819);
+        right: -30px;
+        bottom: -80px;
+      }
+
+      form {
+        height: 520px;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.13);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+      }
+
+      form * {
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+      }
+
+      form h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      input {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      ::placeholder {
+        color: #e5e5e5;
+      }
+
+      button {
+        margin-top: 50px;
+        width: 100%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .social {
+        margin-top: 30px;
+        display: flex;
+      }
+
+      .social div {
+        background: red;
+        width: 150px;
+        border-radius: 3px;
+        padding: 5px 10px 10px 5px;
+        background-color: rgba(255, 255, 255, 0.27);
+        color: #eaf0fb;
+        text-align: center;
+      }
+
+      .social div:hover {
+        background-color: rgba(255, 255, 255, 0.47);
+      }
+
+      .social .fb {
+        margin-left: 25px;
+      }
+
+      .social i {
+        margin-right: 4px;
+      }
+    </style>
   </head>
+
   <body>
     <header>
       <h2 class="hd2">GAMING_HUB</h2>
-      <nav>
-        <ul id="menu">
-          <li>
-            <a href="./index.html"> <i class="fas fa-home"></i> Home </a>
-          </li>
-          <li>
-            <a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a>
-          </li>
-          <li>
-            <a href="./Product.html"><i class="fas fa-box"></i> Products</a>
-          </li>
-        </ul>
-      </nav>
     </header>
-
-    <section class="hero">
-      <div class="parallax">
-        <div class="content">
-          <h1 class="scroll-fade-out">
-            Welcome to GAMING<span class="HUB">HUB</span>
-          </h1>
-          <p class="scroll-fade-out">
-            Discover The Ultimate Experience Of Our Gaming Products.
-          </p>
-          <button class="btn btn-primary btn-lg animate__animated animate">
-            <a href="./Product.html">Explore Now</a>
-          </button>
-        </div>
-      </div>
-    </section>
- <div>
-        <div class="menu-button" id="menuToggle">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-    <div id="team" class="responsive-container-block outer-container">
-      <div class="responsive-container-block inner-container">
-        <p class="text-blk section-head-text scroll-fade-out">
-          Meet Our Collaborators
-        </p>
-        <p class="text-blk section-subhead-text scroll-fade-out">
-          A Team Provided Just For You
-        </p>
-        <div class="responsive-container-block">
-          <div
-            class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container"
-          >
-            <div class="team-card">
-              <div class="img-wrapper">
-                <img class="team-img" src="assets/hatim.jpeg" />
-              </div>
-              <p class="text-blk name">Sami ATLAGH</p>
-              <p class="text-blk position">Full-Stack Develloper</p>
-              <div class="social-media-links">
-                <a href="http://www.twitter.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg"
-                  />
-                </a>
-                <a href="http://www.facebook.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg"
-                  />
-                </a>
-                <a href="http://www.instagram.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg"
-                  />
-                </a>
-                <a href="http://www.gmail.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container"
-          >
-            <div class="team-card">
-              <div class="img-wrapper">
-                <img class="team-img" src="" />
-              </div>
-              <p class="text-blk name">Ayman ALLOUCH</p>
-              <p class="text-blk position">Full-Stack Develloper</p>
-              <div class="social-media-links">
-                <a href="http://www.twitter.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg"
-                  />
-                </a>
-                <a href="http://www.facebook.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg"
-                  />
-                </a>
-                <a href="http://www.instagram.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg"
-                  />
-                </a>
-                <a href="http://www.gmail.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container"
-          >
-            <div class="team-card">
-              <div class="img-wrapper">
-                <img class="team-img" src="" />
-              </div>
-              <p class="text-blk name">Adam AIT-BBA</p>
-              <p class="text-blk position">HR Manager</p>
-              <div class="social-media-links">
-                <a href="http://www.twitter.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg"
-                  />
-                </a>
-                <a href="http://www.facebook.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg"
-                  />
-                </a>
-                <a href="http://www.instagram.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg"
-                  />
-                </a>
-                <a href="http://www.gmail.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container"
-          >
-            <div class="team-card">
-              <div class="img-wrapper">
-                <img class="team-img" src="" />
-              </div>
-              <p class="text-blk name">CHUWAHD</p>
-              <p class="text-blk position">Financial Enginner</p>
-              <div class="social-media-links">
-                <a href="http://www.twitter.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg"
-                  />
-                </a>
-                <a href="http://www.facebook.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg"
-                  />
-                </a>
-                <a href="http://www.instagram.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg"
-                  />
-                </a>
-                <a href="http://www.gmail.com/" target="_blank">
-                  <img
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
     </div>
-    <section class="py-5" style="background-color: rgb(45, 51, 54)">
-      <div class="container">
-        <div class="row align-items-center gx-4">
-          <div class="col-md-5">
-            <div class="ms-md-2 ms-lg-5">
-              <img class="img-fluid rounded-3" src="assets/besla.jpeg" />
-            </div>
-          </div>
-          <div class="col-md-6 offset-md-1">
-            <div class="ms-md-2 ms-lg-5">
-              <span class="text-dark">Our Story</span>
-              <h2 class="display-5 fw-bold">About Us</h2>
-              <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <p>&copy; 2024 GamingHub | All Rights Reserved</p>
-      <button id="scrollToTop">⬆️ Top</button>
-    </footer>
-    <script src="js/directScroll.js"></script>
-    <script src="js/togglemenu.js"></script>
-    <script src="js/teamscroll.js"></script>
-    <script src="js/HeroSection.js"></script>
+    <form>
+      <h3>Login</h3>
+
+      <label for="username">Username</label>
+      <input id="numb" type="text" placeholder="Email " />
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="emb" />
+
+      <button onclick="addUser(event)">Log In</button>
+    </form>
   </body>
+  <script src="js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
