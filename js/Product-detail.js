@@ -8,7 +8,8 @@ const products = {
     originalPrice: "$1399",
     image:
       "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/5.webp",
-    description: "High-performance gaming laptop with powerful graphics: Equipped with the latest high-end GPU and CPU, this laptop ensures smooth gameplay and seamless performance even in the most demanding games. It features a high-refresh rate display, advanced cooling system, and customizable RGB lighting to create the ultimate gaming experience.",
+    description:
+      "High-performance gaming laptop with powerful graphics: Equipped with the latest high-end GPU and CPU, this laptop ensures smooth gameplay and seamless performance even in the most demanding games. It features a high-refresh rate display, advanced cooling system, and customizable RGB lighting to create the ultimate gaming experience.",
   },
   HPNotebook: {
     name: "HP Notebook",
@@ -16,7 +17,8 @@ const products = {
     originalPrice: "$1099",
     image:
       "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp",
-    description: "Lightweight and portable laptop for everyday use: Designed for convenience, this laptop offers a slim profile and a lightweight build, making it easy to carry wherever you go. Despite its portability, it doesn't compromise on performance, featuring efficient processors and long battery life to handle daily tasks effortlessly.",
+    description:
+      "Lightweight and portable laptop for everyday use: Designed for convenience, this laptop offers a slim profile and a lightweight build, making it easy to carry wherever you go. Despite its portability, it doesn't compromise on performance, featuring efficient processors and long battery life to handle daily tasks effortlessly.",
   },
   HPEnvy: {
     name: "HP Envy",
@@ -24,7 +26,8 @@ const products = {
     originalPrice: "$1199",
     image:
       "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/7.webp",
-    description: "Stylish laptop with powerful performance and sleek design: Combining aesthetics with power, this laptop boasts a sleek, premium design with a high-resolution display and fast SSD storage. Its performance is tailored for productivity, multimedia, and creative work, making it a versatile choice for professionals and students alike.",
+    description:
+      "Stylish laptop with powerful performance and sleek design: Combining aesthetics with power, this laptop boasts a sleek, premium design with a high-resolution display and fast SSD storage. Its performance is tailored for productivity, multimedia, and creative work, making it a versatile choice for professionals and students alike.",
   },
 };
 
