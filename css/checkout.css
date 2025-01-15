@@ -8,10 +8,6 @@ h1 {
   text-align: center;
 }
 
-#footer {
-  position: relative;
-}
-
 #cartItemsContainer {
   display: flex;
   flex-direction: column;
