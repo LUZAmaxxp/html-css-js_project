@@ -22,3 +22,25 @@ function handleScroll() {
 
 window.addEventListener("scroll", handleScroll);
 handleScroll();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    threshold: 0.9,
+  };
+
+  const elements = document.querySelectorAll("#features .fade-in");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  }, observerOptions);
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
+});

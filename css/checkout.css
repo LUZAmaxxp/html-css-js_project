@@ -8,10 +8,15 @@ h1 {
   text-align: center;
 }
 
+#footer {
+  position: relative;
+}
+
 #cartItemsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 90vh;
 }
 
 .cart-item {

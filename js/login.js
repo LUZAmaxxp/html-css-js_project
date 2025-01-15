@@ -1,38 +1,45 @@
 function addUser(event) {
   event.preventDefault();
-  let email = document.getElementById("numb").value;
-  let password = document.getElementById("emb").value;
+  const emailInput = document.getElementById("numb");
+  const passwordInput = document.getElementById("emb");
+  const email = emailInput.value;
+  const password = passwordInput.value;
 
-  if (checkin(email, password)) {
-    let myuser = JSON.parse(localStorage.getItem("userData")) || [];
-
-    let userExists = myuser.find(
-      (user) => user.email === email && user.password === password
+  if (!isValidInput(email, password)) {
+    showAlert(
+      "Invalid Input",
+      "Please enter a valid email and password.",
+      "error"
     );
+    return;
+  }
 
-    if (userExists) {
-      showAlert("User Exists", "Welcome Back!", "success", "./index.html");
-    } else {
-      myuser.push({ email, password });
-      localStorage.setItem("userData", JSON.stringify(myuser));
-      showAlert(
-        "User Added",
-        "Your account has been successfully created.",
-        "success",
-        "./home.html"
-      );
-    }
+  const users = JSON.parse(localStorage.getItem("userData")) || [];
+
+  const userExists = users.some(
+    (user) => user.email === email && user.password === password
+  );
+
+  if (userExists) {
+    showAlert("User Exists", "Welcome Back!", "success", "./home.html");
   } else {
-    showAlert("Failed", "Failed to add user. Invalid details.", "error");
+    users.push({ email, password });
+    localStorage.setItem("userData", JSON.stringify(users));
+    showAlert(
+      "User Added",
+      "Your account has been successfully created.",
+      "success",
+      "./home.html"
+    );
   }
 }
+
 function showAlert(title, text, icon, redirectUrl = null) {
   Swal.fire({
-    title: title,
-    text: text,
-    icon: icon,
-    time: 10000,
-
+    title,
+    text,
+    icon,
+    timer: 10000,
     showClass: {
       popup: "swal2-show animate__animated animate__fadeInDown",
     },
@@ -43,25 +50,10 @@ function showAlert(title, text, icon, redirectUrl = null) {
   });
 }
 
-function checkin(email, password) {
-  let PasswordRegex = /^[A-Za-z]\w{7,14}$/;
-  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (emailRegex.test(email) && PasswordRegex.test(password)) {
-    showAlert(
-      "Success!",
-      "You are being redirected.",
-      "success",
-      "./home.html"
-    );
-    return true;
-  } else {
-    showAlert(
-      "Invalid Input",
-      "Please enter a valid email and password.",
-      "error"
-    );
-    return false;
-  }
+function isValidInput(email, password) {
+  const passwordRegex = /^[A-Za-z]\w{7,14}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email) && passwordRegex.test(password);
 }
 
 function redirect(event) {

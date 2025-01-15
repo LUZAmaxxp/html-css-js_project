@@ -1,6 +1,7 @@
 /* General Reset */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -188,7 +189,6 @@ nav a {
 }
 footer {
   text-align: center;
-
   background-color: #343a40;
   color: white;
   margin-top: auto;
