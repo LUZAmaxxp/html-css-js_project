@@ -1,12 +1,15 @@
+#footer {
+  position: static;
+  margin-top: 300px;
+}
+
 .collection {
   display: grid;
   grid-auto-flow: dense;
-  grid-gap: 25px;
+  grid-gap: 35px;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
   padding: 170px;
-  margin: auto;
-  max-height: 110vh;
 }
 
 .product__image {
@@ -165,8 +168,4 @@ nav {
   100% {
     opacity: 0;
   }
-}
-
-#footer {
-  position: absolute;
 }
